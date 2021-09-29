@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form class="row justify-content-center mt-5">
+        <div class="col-3">
+            <input type="number" class="form-control" id="number" placeholder="Entrez un numero à 8 chiffres">
+        </div>
+        <div class="col-auto">
+            <input type="button" value="Convertir" class="btn btn-primary mb-3" onclick="convertir()">
+        </div>
+
+    </form>
+    <script>
+
+        function convertir(){
+        var saisie = document.getElementById("number").value;
+        var position = saisie.substr(0, 2)
+        var lettre = position.toString()
+        if((saisie.length = 8 ) && 
+        (lettre === '01') || 
+        (lettre === '02') || 
+        (lettre === '03') || 
+        (lettre === '52')){
+            alert("01" + saisie);
+        } 
+        else if((saisie.length = 8 ) &&
+        (lettre === '05') || 
+        (lettre === '04') || 
+        (lettre === '44') || 
+        (lettre === '06')){
+            alert("05" + saisie)
+        } 
+        else if((saisie.length = 8 ) &&
+        (lettre === '07') || 
+        (lettre === '08') || 
+        (lettre === '09') || 
+        (lettre === '57') || 
+        (lettre === '49')){
+            alert("07" + saisie)
+        }
+        else
+         {
+             alert("poto")
+         }
+        
+        }
+
+    </script>
+
+</body>
+
+</html>
